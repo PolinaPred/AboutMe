@@ -1,2 +1,2 @@
-# KWKBWDC
-My repository for the BWDCxKWK Scrollytelling project!
+# About Me
+My repository for my About Me webpage!
