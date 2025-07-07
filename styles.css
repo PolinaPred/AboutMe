@@ -1,21 +1,21 @@
-ul{
+.navul{
     list-style-type: none;
     padding: 0px;
     margin: 0px;
     overflow: hidden;
     background-color: #9424FF;
 }
-li{
+.navli{
     float:left;
 }
-li a {
+.navli a {
     display: block;
     padding: 14px 16px;
     color: white;
     text-decoration: none;
     text-align: center;
 }
-li a:hover{
+.navli a:hover{
     background-color: #4B1585;
 }
 
@@ -39,7 +39,6 @@ li a:hover{
 .dropdown-content{
     display: none;
     position: absolute;
-    min-width: 160px;
     z-index: 1;
     background-color: #9424FF;
 }
@@ -61,17 +60,48 @@ li a:hover{
 body{
     font-family: "Ubuntu";
 }
+
 h1{
     margin-top:5%;
     margin-bottom:2%;
 }
-h2{
+
+.titlebox{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.hover-underline{
     margin-top: 2%;
     margin-bottom: 2%;
     text-align: center;
     font-size: 50px;
     color:#9424FF;
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
 }
+.hover-underline::after, .hover-underline::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #F08B0F;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+}
+.hover-underline::before{
+    top: -5px;
+    transform-origin: left;
+}
+.hover-underline:hover::after,
+.hover-underline:hover::before{
+    transform: scaleX(1);
+}
+
 h3{
     margin-top:2%;
     margin-bottom:2%;
@@ -129,4 +159,30 @@ footer{
     background-color: #99E8BC;
     padding-bottom: 4%;
     font-size: 20px;
+}
+
+h4{
+    color: #F08B0F;
+    font-size: 30px;
+    margin-left:10%;
+    margin-top: 2%;
+    margin-bottom:10px;
+}
+
+.year li{
+    margin-left:15%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right:15%;
+}
+
+.detail{
+    margin-left:18%;
+    margin-right:18%;
+    color: #888;
+    margin-top: 0px;
+}
+
+iframe{
+    border:none;
 }
