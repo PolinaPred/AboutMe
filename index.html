@@ -1,17 +1,108 @@
 <!DOCTYPE html>
 <html>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<header>
+<div id="navbar">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <div class = "dropdown">
+        <button class="dropbtn">Hobbies<i class="fa fa-caret-down"></i></button>
+        </div>
+        <div class="dropdown-content">
+          <a href="#hobbies">General</a>
+          <a href="#tabletops">Tabletops</a>
+          <a href="#art">Art</a>
+        </div>
+        <li><a href="#coding">My Coding Journey</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header> 
+
 <body>
+<div>
+    <h1 class="shadow-dance-text">Polina Predius</h1>
+    <script>
+  const title = document.querySelector('.shadow-dance-text');
 
-<h1>Polina Predius</h1>
-<p>🇲🇩 Originally from Moldova</p>
-<p>📍 Living in Miami, FL</p>
-<p>🎨 Media Arts & Sciences Major at Wellesley College 🖥️</p>
+  document.addEventListener('mousemove', (e) => {
+    const rect = title.getBoundingClientRect();
+    const x = e.clientX - (rect.left + rect.width / 2);
+    const y = e.clientY - (rect.top + rect.height / 2);
+
+    // Invert direction
+    const factor = 0.05;
+    const offsetX = -x * factor;
+    const offsetY = -y * factor;
+
+    title.style.textShadow = `
+      ${offsetX}px ${offsetY}px 0 #F08B0F,
+      ${offsetX * 2}px ${offsetY * 2}px 0 #99E8BC
+    `;
+  });
+  </script>
+<p>🇲🇩 Originally from Moldova
+<br>📍 Living in Miami, FL
+<br>🎨 Media Arts & Sciences Major at Wellesley College 🖥️</p>
+</div>
+<hr>
+<div>
+    <h2>Hobbies</h2>
+<div>
+<p>I like video games, anime, and reading!
+  <br>🎮Some of my favorite games include Life is Strange, What Remains of Edith Finch, The Last Guardian, Portal, and Oxygen Not Included. 
+  <br>🎥My favorite movies are Ready Player One, Avatar, and Alita: Battle Angel. 
+  <br>🎬My favorite Studio Ghibli movie is Howl's Moving Castle (the book was better though!) and another anime I enjoyed recently was Suzume. 
+  <br>📚The next books on my list are House of Leaves by Mark Z. Danielewski, I Have No Mouth, and I Must Scream by Harlan Ellison, and Neuromancer by William Gibson.
+</p>
+<div class="image-wall">
+<img src="assets/Power1.PNG">
+<img src = "assets/Power2.jpg">
+<img src = "assets/Fazbear.jpg">
+<img src = "assets/Sora1.jpg">
+<img src = "assets/Power3.jpg">
+<img src = "assets/Coral1.png">
+<img src = "assets/Tardis.jpg">
+<img src = "assets/RenFaire.jpg">
+</div>
+</div>
+<hr>
+<div>
+  <h3>Tabletops</h3>
+<p>I also love Dungeons & Dragons and am always down to try out other tabletops!
+  <br>Scientific fact: There is no such thing as too many dice.
+</p>
+<p>If you're 18 or older, come join us in the Tavern: <a href="https://discord.gg/ufg7GxxHBn">https://discord.gg/ufg7GxxHBn</a> 🐉🎲🧙</p>
+<img src="assets/Tangents.JPG" class="solo-image">
+</div>
+<hr>
+<div>
+  <h3>Art</h3>
+<p>I enjoy all kinds of arts and crafts, but I especially like messing around with digital art, animation, and 3D modeling.</p>
+<p>Here are some demos and WIPs:</p>
+<div class="image-wall">
+<iframe src="https://drive.google.com/file/d/1x_NfswWeY-t0GVFaMTdbWgJgj9c4dn8_/preview" width="640" height="480" allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/1AqhC8G0SSz-ImgIOsIFQt-jmMNtlkVzB/preview" width="640" height="480" allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/1fXZmFrfyXq2abgAGpnW2S7E8KZoP4Fjl/preview" width="640" height="480" allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/1KUabhKbfZDTKgt-uZBto24yjBKmueCRW/preview" width="640" height="480" allow="autoplay"></iframe>
+</div>
+</div>
+</div>
+
 <br>
-<p>I like video games, anime, and reading!</p>
-<img src="Power1.PNG" width=300px>
-<img src = "Power2.jpg" width=300px>
-<img src = "Power3.jpg" width=300px>
-<img scr = "Coral1.PNG" width=300px>
-
 </body>
+
+<footer>
+  <br>
+<h2>Where to Find Me</h2>
+<p>You can reach me at:
+    <br>✉️ polinapredius@gmail.com
+    <br>📞 (954)654-3196
+    <br>LinkedIn: <a href="https://www.linkedin.com/in/polina-predius-856b23291/">https://www.linkedin.com/in/polina-predius-856b23291/</a>
+    <br>or @minitigra on Discord
+</p>
+</footer>
 </html>
