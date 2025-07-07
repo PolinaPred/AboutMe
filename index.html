@@ -1,11 +1,195 @@
 <!DOCTYPE html>
 <html>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<header>
+<div id="navbar">
+    <ul class="navul">
+        <li class="navli"><a href="#home">Home</a></li>
+        <li class = "dropdown navli">
+        <a class="dropbtn" href="#hobbies">Hobbies</a>
+        <div class="dropdown-content">
+          <a href="#tabletops">Tabletops</a>
+          <a href="#art">Art</a>
+        </div>
+        </li>
+        <li class="navli"><a href="#coding">My Coding Journey</a></li>
+        <li class="navli"><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header> 
+
 <body>
+<div>
+    <h1 id="home" class="shadow-dance-text">Polina Predius</h1>
+    <script>
+      const title = document.querySelector('.shadow-dance-text');
 
-<h1>Polina Predius</h1>
-<p>🇲🇩 Originally from Moldova</p>
-<p>📍 Living in Miami, FL</p>
-<p>🎨 Media Arts & Sciences Major at Wellesley College 🖥️</p>
+      document.addEventListener('mousemove', (e) => {
+        const rect = title.getBoundingClientRect();
+        const x = e.clientX - (rect.left + rect.width / 2);
+        const y = e.clientY - (rect.top + rect.height / 2);
 
+        //invert direction
+        const factor = 0.05;
+        const offsetX = -x * factor;
+        const offsetY = -y * factor;
+
+        title.style.textShadow = `
+        ${offsetX}px ${offsetY}px 0 #F08B0F,
+        ${offsetX * 2}px ${offsetY * 2}px 0 #99E8BC
+    `   ;
+      });
+    </script>
+
+  <p>🇲🇩 Originally from Moldova
+  <br>📍 Living in Miami, FL
+  <br>🎨 Media Arts & Sciences Major at Wellesley College 🖥️</p>
+</div>
+<hr>
+<div>
+  <div class="titlebox">
+    <div class = "hover-underline" id="hobbies">Hobbies</div>
+  </div>
+  <div>
+    <p>I like video games, anime, and reading!
+    <br>🎮Some of my favorite games include Life is Strange, What Remains of Edith Finch, The Last Guardian, Portal, and Oxygen Not Included. 
+    <br>🎥My favorite movies are Ready Player One, Avatar, and Alita: Battle Angel. 
+    <br>🎬My favorite Studio Ghibli movie is Howl's Moving Castle (the book was better though!) and another anime I enjoyed recently was Suzume. 
+    <br>📚The next books on my list are House of Leaves by Mark Z. Danielewski, I Have No Mouth, and I Must Scream by Harlan Ellison, and Neuromancer by William Gibson.
+    </p>
+
+    <div class="image-wall">
+      <img src="assets/Power1.PNG">
+      <img src = "assets/Power2.jpg">
+      <img src = "assets/Fazbear.jpg">
+      <img src = "assets/Sora1.jpg">
+      <img src = "assets/Power3.jpg">
+      <img src = "assets/Coral1.png">
+      <img src = "assets/Tardis.jpg">
+      <img src = "assets/RenFaire.jpg">
+    </div>
+  </div>
+  <hr>
+
+  <div>
+    <h3 id="tabletops">Tabletops</h3>
+    <p>I also love Dungeons & Dragons and am always down to try out other tabletops!
+      <br>Scientific fact: There is no such thing as too many dice.
+    </p>
+    <p>If you're 18 or older, come join us in the Tavern: <a href="https://discord.gg/ufg7GxxHBn">https://discord.gg/ufg7GxxHBn</a> 🐉🎲🧙</p>
+    <img src="assets/Tangents.JPG" class="solo-image">
+  </div>
+  <hr>
+  <div>
+    <h3 id="art">Art</h3>
+    <p>I enjoy all kinds of arts and crafts, but I especially like messing around with digital art, animation, and 3D modeling.</p>
+    <p>Here are some demos and WIPs:</p>
+    <div class="image-wall">
+      <iframe src="https://drive.google.com/file/d/1x_NfswWeY-t0GVFaMTdbWgJgj9c4dn8_/preview" width="640" height="480" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1AqhC8G0SSz-ImgIOsIFQt-jmMNtlkVzB/preview" width="640" height="480" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1fXZmFrfyXq2abgAGpnW2S7E8KZoP4Fjl/preview" width="640" height="480" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1KUabhKbfZDTKgt-uZBto24yjBKmueCRW/preview" width="640" height="480" allow="autoplay"></iframe>
+    </div>
+  </div>
+  <div>
+    <div class="titlebox">
+    <div class="hover-underline" id="coding">My Coding Journey</div>
+    </div> 
+    <div class="year">
+      <h4>2018</h4>
+      <ul>
+        <li>Discovered love for coding through middle school JavaScript class and after-school game development club</li>
+      </ul>
+    </div>
+    <div class="year">
+      <h4>2019</h4>
+      <ul>
+        <li>First LEGO League Middle School Robotics Competition</li>
+          <p class="detail">Team received a Global Innovation Award</p>
+        <li>Middle school HTML and CSS classes</li>
+      </ul>
+    </div>
+    <div class="year">
+      <h4>2020</h4>
+      <ul>
+      <li>CoderZ Virtual Robotics Challenge</li>
+      </ul>
+    </div>
+    <div class="year">
+      <h4>2022</h4>
+        <ul>
+        <li>Completed the MAGIC Summer Camp</li>
+          <p class="detail">3D Game Design with Unity</p>
+        </ul>
+      </div>
+      <div class="year">
+      <h4>2023</h4>
+      <ul>
+        <li>Transferred to SAS for more CS course offerings</li>
+        <li>Took a college class in C++ Programming</li>
+          <p class="detail">At Miami Dade College</p>
+        <li>Attended eMerge Americas 2023</li>
+        <li>Completed the Girls Who Code Summer Immersion Program</li>
+          <p class="detail">Including the GWC Game Jam</p>
+      </ul>
+      </div>
+      <div class="year">
+      <h4>2024</h4>
+      <ul>
+        <li>Intro to Data Science</li>
+          <p class="detail">By Girls Who Code</p>
+        <li>Attended eMerge Americas 2024</li>
+        <li>Kode With Klossy Mobile App Development Scholar</li>
+          <p class="detail">My introduction to KWK!</p>
+        <li>Learned to pilot a robot dog for a TedxMDC event</li>
+        <li>Completed an AI Awareness College Credit Certificate</li>
+          <p class="detail">At Miami Dade College</p>
+        <li>Team advanced to Finalist in Code/Art Changemakers Challenge 2024</li>
+        <li>Completed the Artificial Intelligence Fundamentals with Capstone Certification</li>
+          <p class="detail">From IBM</p>
+        <li>Created an AR project for the MoMath Steven H. Strogatz Math Communications Competition</li>
+        <li>Took a college class in Object-Oriented Programming with C++</li>
+          <p class="detail">At Miami Dade College</p>
+        <li>Took a college class in Java Programming</li>
+          <p class="detail">At Miami Dade College</p>
+      </ul>
+      </div>
+      <div class="year">
+      <h4>2025</h4>
+      <ul>
+        <li>Team advanced to Finalist in Code/Art Changemakers Challenge 2025</li>
+          <p class="detail">Participated as Team Leader</p>
+        <li>Attended React Miami 2025</li>
+        <li>Took a college class in Advanced Java Programming</li>
+          <p class="detail">At Miami Dade College</p>
+        <li>FLDS Cybersecurity Internship</li>
+          <p class="detail">Learned about AWS and SEIM solutions used by the Florida Department of Management Services and facilitated Data Interoperability in newly adopted software.</p>
+        <li>UX Review Internship</li>
+          <p class="detail">Provided actionable recommendations for website improvement and modernization for YES to YOUTH, a nonprofit based in Houseton, TX.</p>
+        <li>Hack Club Neighborhood</li>
+          <p class="detail">Working on a personal project for 100 hours to earn a travel stipent to go to San Francisco and live with other Hack Clubbers for a few weeks in August.</p>
+        <li>KWKxBWDC Challenge!</li>
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
 </body>
+
+<footer>
+  <br>
+  <div class="titlebox">
+<div class="hover-underline" id="contact">Where to Find Me</div>
+</div> 
+<p>You can reach me at:
+    <br>✉️ polinapredius@gmail.com
+    <br>📞 (954)654-3196
+    <br>LinkedIn: <a href="https://www.linkedin.com/in/polina-predius-856b23291/">https://www.linkedin.com/in/polina-predius-856b23291/</a>
+    <br>or @minitigra on Discord
+</p>
+</footer>
 </html>
